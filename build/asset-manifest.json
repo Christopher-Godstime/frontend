@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b12b1bff.css",
+    "main.js": "/static/js/main.8bdd8369.js",
+    "static/media/home.png": "/static/media/home.4db31eed7b3b3aa986b9.png",
+    "static/media/home2.png": "/static/media/home2.285924a45ecf91a03452.png",
+    "static/media/calendar.jpeg": "/static/media/calendar.30f241cf738b835f591b.jpeg",
+    "index.html": "/index.html",
+    "main.b12b1bff.css.map": "/static/css/main.b12b1bff.css.map",
+    "main.8bdd8369.js.map": "/static/js/main.8bdd8369.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b12b1bff.css",
+    "static/js/main.8bdd8369.js"
+  ]
+}

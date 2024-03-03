@@ -357,7 +357,7 @@ const Home = () => {
               <img className="w-[28px]" src={angle} />
             </div>
             <div
-              className="flex transition-transform duration-500 gap-[50px] items-end justify-center mx-auto lg:w-[1080px] w-[750px] sm:w-[910px]"
+              className="flex transition-transform duration-500 gap-[50px] items-end justify-center mx-auto lg:w-[1080px] md:w-[1020px] sm:w-[870px] w-[750px]"
               ref={containerRef}
               style={{ transform: `translateX(${slideOffset}px)` }}
             >
@@ -468,9 +468,9 @@ const Home = () => {
               View more
             </button>
           </div>
-          <div className="lg:w-[58%] gap-[15px] flex mt-[40px] lg:mt-[0px]">
+          <div className="lg:w-[58%] gap-[8px] md:gap-[15px] flex mt-[40px] lg:mt-[0px]">
             <div className="w-[50%]">
-              <div className="md:pb-[140%] pb-[130%]  pr-[24px] relative overflow-hidden ">
+              <div className="md:pb-[140%] pb-[160%]  pr-[24px] relative overflow-hidden ">
                 <img
                   className="lg:rounded-[24px] rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover "
                   src={home2}
@@ -487,7 +487,7 @@ const Home = () => {
               </div>
             </div>
             <div className="w-[25%] relative">
-              <div className="md:pb-[280%] pb-[260%] pr-[24px] relative overflow-hidden">
+              <div className="md:pb-[280%] pb-[320%] pr-[24px] relative overflow-hidden">
                 <img
                   className="lg:rounded-[24px] rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover"
                   src={home2}
@@ -501,7 +501,7 @@ const Home = () => {
               </div>
             </div>
             <div className="w-[25%] relative">
-              <div className="md:pb-[280%] pb-[260%] pr-[24px] relative overflow-hidden">
+              <div className="md:pb-[280%] pb-[320%] pr-[24px] relative overflow-hidden">
                 <img
                   className="lg:rounded-[24px] rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover"
                   src={home2}

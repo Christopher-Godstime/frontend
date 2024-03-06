@@ -72,7 +72,7 @@ const Navbar = ({ show, setShow }) => {
         }}
       >
         <div
-          className={`top-0 left-0 z-40 absolute overflow-y-auto h-[calc(100vh)] bg-black md:w-[394px] w-full  pt-[28px]  ${
+          className={`top-0 left-0 z-40 absolute overflow-y-auto h-[calc(100vh)] bg-black md:w-[400px] w-full  pt-[28px]  ${
             show ? "translate-x-0" : "-translate-x-full"
           } ease-in-out duration-500`}
         >
@@ -134,7 +134,7 @@ const Navbar = ({ show, setShow }) => {
                 className="text-[16px] font-[500] md:font-[400] text-white"
               >
                 <NavLink
-                  to="/discovery"
+                  to="/discovering"
                   style={({ isActive }) => {
                     return { color: isActive ? "#F86108" : "white" };
                   }}
@@ -181,7 +181,10 @@ const Navbar = ({ show, setShow }) => {
                   Blog
                 </NavLink>
               </h4>
-              <h4 className="text-[16px] font-[500] md:font-[400] text-white">
+              <h4
+                onClick={() => setShow(!show)}
+                className="text-[16px] font-[500] md:font-[400] text-white"
+              >
                 <NavLink
                   to="/academy"
                   style={({ isActive }) => {
@@ -189,6 +192,32 @@ const Navbar = ({ show, setShow }) => {
                   }}
                 >
                   Bimbo Messele Academy
+                </NavLink>
+              </h4>
+              <h4
+                onClick={() => setShow(!show)}
+                className="text-[16px] font-[500] md:font-[400] text-white"
+              >
+                <NavLink
+                  to="/training"
+                  style={({ isActive }) => {
+                    return { color: isActive ? "#F86108" : "white" };
+                  }}
+                >
+                  Training for leaders & organizations
+                </NavLink>
+              </h4>
+              <h4
+                onClick={() => setShow(!show)}
+                className="text-[16px] font-[500] md:font-[400] text-white"
+              >
+                <NavLink
+                  to="/executive"
+                  style={({ isActive }) => {
+                    return { color: isActive ? "#F86108" : "white" };
+                  }}
+                >
+                  Executive Coaching
                 </NavLink>
               </h4>
             </div>

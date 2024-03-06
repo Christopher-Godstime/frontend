@@ -71,30 +71,22 @@ const Home = () => {
       (t) => t.id === selectedTestimonial.id
     );
 
-    // Assuming all non-selected images have a width of 80px, selected ones are 120px,
-    // and there's a 50px gap between images.
     const imageWidth = 80;
     const selectedImageWidth = 550;
     const gap = 50;
 
-    // Calculate the total width before the selected image
     let totalWidthBeforeSelected = 0;
     for (let i = 0; i < index; i++) {
-      totalWidthBeforeSelected += imageWidth + gap; // Add width of each image and the gap
+      totalWidthBeforeSelected += imageWidth + gap;
     }
 
-    // Get the width of the container holding the testimonials using React refs
     const containerWidth = containerRef.current.offsetWidth;
 
-    // Calculate the offset needed to center the selected image
     const offset =
       totalWidthBeforeSelected + (selectedImageWidth - containerWidth) / 2;
 
-    // Set the calculated offset
     setSlideOffset(-offset);
   }, [selectedTestimonial, testimonials]);
-
-  console.log(slideOffset);
 
   return (
     <div>

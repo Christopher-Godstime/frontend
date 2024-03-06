@@ -59,3 +59,44 @@
     }
   }
 
+  .hidden-input2 {
+    position: absolute;
+    opacity: 0;
+  }
+
+  
+  .custom-radio2 {
+    /* width: 40px;
+    height: 40px; */
+    border: 1px solid #D0D5DD; 
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hidden-input2:checked + .custom-radio2 {
+    background-color: #021732; 
+    border-color: #D0D5DD; 
+  }
+
+  
+  .checkmark2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   width: max-content;
+   height: max-content;
+    background-color: #021732; 
+    border-radius: 4px;
+    display: none;
+  }
+
+
+  .hidden-input2:checked + .custom-radio2 .checkmark2 {
+    display: block;
+  }
+
+
+

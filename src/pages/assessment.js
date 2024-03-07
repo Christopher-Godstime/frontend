@@ -4,9 +4,10 @@ import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
 import { FiCheck } from "react-icons/fi";
 import "react-phone-input-2/lib/style.css";
 import { FiChevronDown } from "react-icons/fi";
-import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
+import axios from "axios";
 import validate from "../utils/validate";
+import logo1 from "../assets/logo1.png";
 import a1 from "../assets/a1.png";
 import a2 from "../assets/a2.png";
 import a3 from "../assets/a3.png";
@@ -132,6 +133,8 @@ const Assessment = () => {
   const [formData, setFormData] = useState(initialState);
   const [formError, setFormError] = useState({});
   const [page, setPage] = useState(0);
+  const [sending, setSending] = useState(false);
+  const [successText, setSuccessText] = useState(false);
 
   const formTiles = [
     "Personal Details",
@@ -141,6 +144,36 @@ const Assessment = () => {
     "Assessment 4",
     "Assessment 5",
   ];
+
+  const sendAssessment = async () => {
+    try {
+      setSending(true);
+      const response = await axios.post(
+        "http://localhost:5000/api/email/send_email",
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone_number: `${selectedPhone.idd.root}${selectedPhone.idd.suffixes[0]}${formData.phoneNumber}`,
+          location: formData.location,
+          assessment1: parseInt(formData.assessment1),
+          assessment2: parseInt(formData.assessment2),
+          assessment3: parseInt(formData.assessment3),
+          assessment4: parseInt(formData.assessment4),
+          assessment5: parseInt(formData.assessment5),
+        },
+        {
+          headers: { "Content-Type": "application/json" },
+        }
+      );
+
+      setSuccessText(true);
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setSending(false);
+    }
+  };
 
   const handleSubmit = () => {
     const validationErrors = validate(formData);
@@ -152,9 +185,12 @@ const Assessment = () => {
     });
 
     if (currentSectionErrors.length === 0) {
-      alert("FORM SUBMITTED");
+      sendAssessment();
     }
     console.log(formData);
+    console.log(
+      `${selectedPhone.idd.root}${selectedPhone.idd.suffixes[0]}${formData.phoneNumber}`
+    );
   };
 
   const handleNext = () => {
@@ -213,10 +249,18 @@ const Assessment = () => {
 
   console.log(formData);
 
+  useEffect(() => {
+    if (sending === true || successText === true) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [sending, successText]);
+
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
-      <div className="bg-black md:p-[5%] px-[4%] py-[70px] ">
+      <div className="bg-black md:p-[5%] px-[4%] 2xl:px-[12%] py-[70px] ">
         <div className="bg-white lg:p-[0px]  p-[5%] lg:px-[32px] md:rounded-[24px] rounded-[8px]">
           <div className="lg:p-[32px] pb-[20px] border-b-[1px] border-gray-300">
             <div className="flex justify-between items-center gap-[20px]">
@@ -2481,6 +2525,35 @@ const Assessment = () => {
           </div>
         </div>
       </div>
+
+      {sending === true ? (
+        <div
+          className="fixed loading w-full h-full"
+          style={{
+            background: "#0008",
+            color: "white",
+            top: 0,
+            left: 0,
+            zIndex: 50,
+          }}
+        >
+          <div className="flex justify-center ">
+            <div>
+              <img className="w-[170px]" src={logo1} />
+              <h4
+                className="text-white flex justify-center  text-[20px] font-bold"
+                fill="#fff"
+                x="5"
+                y="45"
+              >
+                Loading...
+              </h4>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

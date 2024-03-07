@@ -39,7 +39,7 @@ const Navbar = ({ show, setShow }) => {
             : "sticky z-40"
         }
       >
-        <div className="px-[4%] xl:px-[60px] ">
+        <div className="px-[4%] xl:px-[60px] 2xl:px-[12%] ">
           <div className="flex justify-between items-center h-[70px]">
             <div className="flex items-center gap-[20px]">
               <div className="cursor-pointer">
@@ -76,7 +76,7 @@ const Navbar = ({ show, setShow }) => {
             show ? "translate-x-0" : "-translate-x-full"
           } ease-in-out duration-500`}
         >
-          <div className="px-[4%] xl:px-[60px] flex flex-col h-full">
+          <div className="px-[4%] xl:px-[60px] 2xl:px-[12%] flex flex-col h-full">
             <div className="flex items-center justify-between ">
               <div>
                 <Link to="/">

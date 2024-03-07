@@ -99,7 +99,7 @@ const Home = () => {
           backdropFilter: "",
         }}
       >
-        <div className="absolute right-[4%] xl:right-[60px] bottom-[60px] md:bottom-[120px]">
+        <div className="absolute right-[4%] xl:right-[60px] 2xl:right-[12%] bottom-[60px] md:bottom-[120px]">
           <h4 className="text-[36px] xl:text-[48px] xl:leading-[60px] text-white font-[600] leading-[44px] text-end">
             Bimbo Mesele <br></br>Coaching Company
           </h4>
@@ -109,7 +109,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
         <ul className="flex relative justify-between items-center text-[24px] font-[400] text-[#021732] rounded-[50px] bg-gray-100 w-fit mx-auto ">
           {Menus.map((menu, i) => (
             <li key={i} className="">
@@ -150,7 +150,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] mt-[50px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]  mt-[50px]">
         <h4 className="text-center text-[36px] font-[700] leading-[44px] xl:font-[600] xl:text-[48px] xl:leading-[60px]">
           Courses
         </h4>
@@ -205,7 +205,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] ">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%] ">
         <div className="bg-[#FFF8E6] rounded-[16px] px-[24px]  ">
           <div className="md:w-[64%] h-[560px] md:h-[512px] flex flex-col justify-center mx-auto">
             <h4 className="text-black text-[30px] leading-[38px] font-[600] mb-[10px] text-center xl:text-[48px] xl:font-[700] xl:leading-[60px] ">
@@ -223,7 +223,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
         <div className="flex justify-between items-end border-b-[1px] border-gray-200 pb-[20px]">
           <h4 className="text-[36px] font-[500] leading-[44px]">
             Upcoming events
@@ -376,7 +376,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
         <div className="flex justify-between items-end border-b-[1px] border-gray-200 pb-[10px]">
           <h4 className="text-[36px] font-[600] leading-[44px]">
             Recent blog posts
@@ -446,7 +446,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
         <div className="lg:flex gap-[50px] items-center">
           <div className="lg:w-[42%]">
             <h4 className="text-[30px] font-[700] xl:text-[48px] xl:font-[600]">
@@ -510,7 +510,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
         <div className="lg:flex gap-[40px]">
           <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
             <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">

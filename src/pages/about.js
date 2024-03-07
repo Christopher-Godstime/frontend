@@ -7,14 +7,14 @@ const About = () => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
-      <div className=" px-[4%] xl:px-[60px]  ">
+      <div className=" px-[4%] xl:px-[60px] 2xl:px-[12%] ">
         <h4 className="py-[48px] text-[40px] font-[700] lg:text-[60px] lg:font-[600] lg:leading-[72px] leading-[48px] lg:w-[726px] text-[#021732]">
           LEGACY IS GREATER THAN CURRENCY
         </h4>
         <div className="py-[48px]">
-          <div className="md:pb-[80%] py-[75%]  pr-[24px] relative overflow-hidden md:w-[46%] mx-auto rounded-[24px] md:rounded-[0px]">
+          <div className="md:pb-[80%] py-[75%]  pr-[24px] relative overflow-hidden mx-auto rounded-[24px] md:rounded-[0px]">
             <img
-              className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
+              className="rounded-[24px] absolute top-0 left-0 w-[100%] h-[100%] object-cover "
               src={home2}
               alt="Background"
             />

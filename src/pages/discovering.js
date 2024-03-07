@@ -16,7 +16,7 @@ const Discovery = () => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
-      <div className=" px-[4%] xl:px-[60px]">
+      <div className=" px-[4%] xl:px-[60px] 2xl:px-[12%]">
         <div className="xl:flex lg:gap-[48px]">
           <div className="xl:w-[60%]">
             <div className="pt-[48px]">

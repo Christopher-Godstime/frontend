@@ -20,7 +20,7 @@ const Training = () => {
         <div className="xl:flex lg:gap-[48px]">
           <div className="xl:w-[60%]">
             <div className="pt-[48px]">
-              <h4 className="text-[30px] font-[600] md:text-[48px] md:font-[700] md:leading-[60px] xl:whitespace-nowrap">
+              <h4 className="text-[30px] font-[600] md:text-[48px] md:font-[700] md:leading-[60px] ">
                 Training for leaders & organizations
               </h4>
               <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[44px] md:mt-[24px]">
@@ -134,7 +134,7 @@ const Training = () => {
                     <img className="w-[32px]" src={check} />
                   </div>
                   <div>
-                    <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px] xl:whitespace-nowrap">
+                    <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px] ">
                       Transformative training tailored to your organization’s
                       needs
                     </h4>
